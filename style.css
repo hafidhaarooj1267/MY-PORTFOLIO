@@ -745,9 +745,10 @@ footer {
 /* Theme Switcher Button */
 .theme-switcher {
     position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    z-index: 200;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 99999;
+    /* Sabse upar rahega */
     background: var(--glass-bg);
     backdrop-filter: blur(15px);
     border: 1px solid var(--glass-border);
