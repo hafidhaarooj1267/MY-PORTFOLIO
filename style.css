@@ -416,7 +416,7 @@ section {
     flex: 0 0 auto;
     width: 380px;
     background: var(--glass-bg);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
     border-radius: 20px;
     padding: 16px;
     border: 1px solid var(--glass-border);
@@ -500,26 +500,6 @@ section {
 }
 
 /* Mobile Responsive */
-@media (max-width: 768px) {
-    .carousel-card {
-        width: 280px;
-        padding: 12px;
-    }
-
-    .prev {
-        left: -10px;
-    }
-
-    .next {
-        right: -10px;
-    }
-
-    .carousel-btn {
-        width: 36px;
-        height: 36px;
-        font-size: 1.2rem;
-    }
-}
 
 /* .carousel-container {
     position: relative;
@@ -765,26 +745,107 @@ footer {
     transform: scale(1.05);
 }
 
+.hamburger {
+    display: none;
+}
+
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
+
+    /* 1. Force layout alignment for mobile header */
+    .nav-container {
+        display: flex;
+        flex-wrap: wrap;
+        /* Allows menu links to drop to the next line */
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin: 0 auto;
     }
 
+    /* 2. Format a professional hamburger icon look */
+    .hamburger {
+        display: block !important;
+        background: transparent;
+        border: none;
+        font-size: 1.8rem;
+        cursor: pointer;
+        color: var(--text-primary);
+        padding: 0.5rem;
+        z-index: 101;
+    }
+
+    /* 3. Hide links by default, force full width when active */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        /* Takes up 100% width on its own new line */
+        gap: 1.2rem;
+        /* Increases spacing so it's clean and readable */
+        font-size: 1.1rem;
+        padding: 1.5rem 0 1rem 0;
+        text-align: center;
+        /* Centers your menu links beautifully */
+    }
+
+    /* 4. Display drop-down smoothly when active class is toggled */
+    .nav-links.active {
+        display: flex !important;
+    }
+
+    /* Keep all your other timeline/theme fixes below this... */
     .timeline::before {
         left: 1.5rem;
     }
 
-    .timeline-item,
-    .timeline-item:nth-child(odd) {
-        justify-content: flex-start;
-        padding-left: 3rem;
-        padding-right: 0;
+    body {
+        cursor: auto !important;
     }
 
-    .timeline-dot {
-        left: 1.1rem;
-        right: auto;
+    .cursor-glow {
+        display: none !important;
     }
+
+
+    .theme-switcher {
+        position: fixed !important;
+        left: 1rem !important;
+        /* Added !important here to force it left */
+        right: auto !important;
+        /* Clears the desktop right position */
+        bottom: 2rem !important;
+        /* Keeps it securely at the bottom */
+        z-index: 999999999 !important;
+        display: block !important;
+        background: #ff0055 !important;
+        /* Keep neon pink for testing */
+        color: white !important;
+    }
+
+
+    /* .theme-switcher {
+        position: fixed !important;
+        bottom: 2.5rem !important;
+        right: 1.5rem !important;
+        z-index: 9999999 !important;
+        display: block !important;
+        padding: 0.6rem 1rem !important;
+        background: #ffffff !important;
+       
+    /* color: #000000 !important; */
 }
 
+
+
+
+/* @media (max-width: 768px) {
+    .theme-switcher {
+        bottom: 2rem; /* Moves it higher up on mobile */
+right: 2rem;
+/* Moves it further left away from edge */
+padding: 0.6rem 1rem;
+/* Makes button size mobile-friendly */
+}
+
+*/
 /* for image of certifactes */
