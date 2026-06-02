@@ -143,6 +143,17 @@ window.addEventListener('scroll', () => {
         if (link.getAttribute('href') === `#${current}`) link.classList.add('active');
     });
 });
+// ========== HAMBURGER TOGGLE ==========
+document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.getElementById('hamburger');
+    const navLinksMenu = document.querySelector('.nav-links'); // Fixed selector
+
+    if (hamburger && navLinksMenu) {
+        hamburger.addEventListener('click', function () {
+            navLinksMenu.classList.toggle('active');
+        });
+    }
+});
 
 // ========== COUNT-UP STATS ==========
 function animateCountUp(el, target) {
