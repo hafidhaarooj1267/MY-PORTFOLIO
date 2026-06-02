@@ -8,7 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="style.css">
- 
+
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-N64T2DNXWF"></script>
   <script>
@@ -18,244 +19,10 @@
 
     gtag('config', 'G-N64T2DNXWF');
   </script>
-
-
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&family=Space+Mono:wght@400;700&display=swap"
     rel="stylesheet">
-  <!-- <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
- linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-    /* Theme variables (default: Light)    background: linear-gradient(145deg, #ffffff 0%, #f4f9ef 100%); */
-    :root {
-      --bg1: #f8fafc;
-      --bg2: #e2e8f0;
-      --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-      --glass-bg: rgba(255,255,255,0.7);
-      --glass-border: rgba(0,0,0,0.05);
-      --shadow: 0 15px 35px rgba(0,0,0,0.08);
-      --text-primary: #1e293b;
-      --text-secondary: #475569;
-      --accent1: #2563eb; /* Front-End */
-      --accent2: #059669; /* Data Analytics */
-      --accent3: #7c3aed; /* Data Science */
-      --nav-bg: rgba(255,255,255,0.8);
-      --particle-color: rgba(124, 58, 237, 0.4);
-      --cursor-glow: #7c3aed;
-      --btn-primary-bg: #7c3aed;
-      --btn-primary-text: white;
-      --hero-heading-gradient: linear-gradient(135deg, #2563eb, #7c3aed);
-    }
 
-    body {
-      font-family: 'Inter', system-ui, sans-serif;
-      color: var(--text-primary);
-      background: var(--bg-gradient);
-      background-size: 400% 400%;
-      animation: gradientShift 20s ease infinite;
-      overflow-x: hidden;
-      position: relative;
-      cursor: none;
-      transition: background 0.5s, color 0.5s;
-    }
-
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    /* Full-page particle canvas */
-    #particleCanvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-      pointer-events: none;
-    }
-
-    .cursor-glow {
-      position: fixed;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      background: radial-gradient(circle, var(--cursor-glow), transparent);
-      pointer-events: none;
-      z-index: 9999;
-      mix-blend-mode: screen;
-      transition: background 0.3s;
-    }
-
-    h1 { font-size: clamp(2.5rem, 8vw, 5rem); line-height: 1.1; }
-    h2 { font-size: 2.5rem; text-align: center; margin-bottom: 3rem; position: relative; }
-    h2::after {
-      content: '';
-      position: absolute; bottom: -12px; left: 50%; transform: translateX(-50%);
-      width: 70px; height: 4px;
-      background: linear-gradient(to right, var(--accent1), var(--accent2), var(--accent3));
-      border-radius: 4px;
-    }
-    section { padding: 6rem 0; position: relative; z-index: 2; }
-    .container { width: 90%; max-width: 1280px; margin: 0 auto; }
-
-    .glass-card {
-      background: var(--glass-bg);
-      backdrop-filter: blur(20px);
-      border: 1px solid var(--glass-border);
-      border-radius: 20px;
-      padding: 2rem;
-      box-shadow: var(--shadow);
-      transition: transform 0.4s, box-shadow 0.4s, background 0.5s;
-    }
-    .glass-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 25px 45px rgba(0,0,0,0.12);
-    }
-
-    .navbar {
-      position: sticky; top: 0; z-index: 100;
-      background: var(--nav-bg);
-      backdrop-filter: blur(25px);
-      border-bottom: 2px solid transparent;
-      padding: 1rem 0;
-      transition: background 0.5s;
-    }
-    .navbar::after {
-      content: '';
-      position: absolute; bottom: -2px; left: 0; width: 100%; height: 2px;
-      background: linear-gradient(90deg, var(--accent1), var(--accent2), var(--accent3), var(--accent1));
-      background-size: 300% 100%;
-      animation: shimmer 4s linear infinite;
-    }
-    @keyframes shimmer { 0% { background-position: 0% 50%; } 100% { background-position: 300% 50%; } }
-    .nav-container { display: flex; justify-content: space-between; align-items: center; }
-    .nav-logo { font-weight: 700; font-size: 1.8rem; color: var(--text-primary); text-decoration: none; }
-    .nav-links { display: flex; gap: 1.5rem; list-style: none; }
-    .nav-links a { text-decoration: none; color: var(--text-secondary); font-weight: 500; transition: color 0.3s; }
-    .nav-links a:hover, .nav-links a.active { color: var(--accent3); font-weight: 600; }
-
-    .btn { padding: 0.8rem 2.2rem; border-radius: 50px; font-weight: 600; text-decoration: none; cursor: pointer; border: none; font-size: 1rem; display: inline-block; transition: 0.3s; }
-    .btn-primary { background: var(--btn-primary-bg); color: var(--btn-primary-text); box-shadow: 0 8px 25px rgba(124,58,237,0.35); }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(124,58,237,0.5); }
-    .btn-outline { background: transparent; border: 2px solid var(--accent1); color: var(--accent1); }
-    .btn-outline:hover { background: var(--accent1); color: white; }
-
-    .hero { min-height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center; position: relative; }
-    .hero-content { position: relative; z-index: 2; max-width: 850px; }
-    .typing-box {
-      display: inline-block; background: var(--glass-bg);
-      backdrop-filter: blur(10px); padding: 0.5rem 1.5rem; border-radius: 40px;
-      font-family: 'Space Mono', monospace; font-size: 1.1rem; margin-bottom: 2rem;
-      border: 1px solid var(--glass-border);
-    }
-    #typing-text::after { content: '|'; animation: blink 1s step-end infinite; color: var(--accent2); }
-    @keyframes blink { 50% { opacity: 0; } }
-    .hero h1 {
-      background: var(--hero-heading-gradient);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      background-clip: text; margin-bottom: 1.5rem;
-    }
-    .hero-subtitle { font-size: 1.25rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto 2rem; }
-    .pill-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-bottom: 2.5rem; }
-    .pill {
-      background: var(--glass-bg); backdrop-filter: blur(10px);
-      padding: 0.5rem 1.2rem; border-radius: 50px; font-weight: 600; font-size: 0.9rem;
-      border-left: 4px solid;
-    }
-    .pill-fe { border-color: var(--accent1); color: var(--accent1); }
-    .pill-bi { border-color: var(--accent2); color: var(--accent2); }
-    .pill-ds { border-color: var(--accent3); color: var(--accent3); }
-
-    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
-    .skill-card { text-align: center; padding: 2.5rem 1.8rem; }
-    .skill-icon { font-size: 2.8rem; margin-bottom: 1rem; }
-    .skill-fe h3 { color: var(--accent1); }
-    .skill-bi h3 { color: var(--accent2); }
-    .skill-ds h3 { color: var(--accent3); }
-    .tool-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; margin-top: 1.2rem; }
-    .tool-tag {
-      background: rgba(0,0,0,0.03); padding: 0.3rem 0.8rem; border-radius: 20px;
-      font-size: 0.8rem; font-weight: 500; color: var(--text-secondary);
-      border: 1px solid rgba(0,0,0,0.05);
-    }
-
-    .carousel-container { position: relative; max-width: 900px; margin: 0 auto; overflow: hidden; padding: 1rem 0; }
-    .carousel-track { display: flex; transition: transform 0.5s ease-in-out; }
-    .carousel-card { min-width: 300px; margin: 0 1rem; }
-    .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; box-shadow: 0 5px 20px rgba(0,0,0,0.1); z-index: 10; font-size: 1.2rem; }
-    .prev { left: 0; } .next { right: 0; }
-
-    .flip-card { perspective: 1000px; }
-    .flip-inner { position: relative; width: 100%; height: 100%; transition: transform 0.6s; transform-style: preserve-3d; }
-    .flip-card.flipped .flip-inner { transform: rotateY(180deg); }
-    .flip-front, .flip-back { backface-visibility: hidden; }
-    .flip-back { transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; background: var(--glass-bg); backdrop-filter: blur(20px); border-radius: 20px; padding: 2rem; }
-
-    .timeline { position: relative; padding: 2rem 0; }
-    .timeline::before {
-      content: ''; position: absolute; left: 50%; transform: translateX(-50%);
-      width: 3px; height: 100%; background: linear-gradient(to bottom, var(--accent2), var(--accent3));
-      opacity: 0.3;
-    }
-    .timeline-line-overlay {
-      position: absolute; left: 50%; transform: translateX(-50%); width: 3px; height: 0;
-      background: linear-gradient(to bottom, var(--accent2), var(--accent3)); z-index: 1; transition: height 0.1s linear;
-    }
-    .timeline-item {
-      display: flex; justify-content: flex-end; padding-right: calc(50% + 2rem); margin-bottom: 3rem; position: relative;
-    }
-    .timeline-item:nth-child(odd) {
-      justify-content: flex-start; padding-left: calc(50% + 2rem); padding-right: 0;
-    }
-    .timeline-content { max-width: 450px; position: relative; z-index: 2; }
-    .timeline-dot {
-      position: absolute; top: 1.5rem; width: 16px; height: 16px; border-radius: 50%;
-      background: white; border: 3px solid var(--accent2); z-index: 3;
-    }
-    .timeline-item:nth-child(odd) .timeline-dot { left: -2.8rem; }
-    .timeline-item:nth-child(even) .timeline-dot { right: -2.8rem; }
-
-    .contact-form { max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.2rem; }
-    .contact-form input, .contact-form textarea {
-      background: var(--glass-bg); border: 1px solid var(--glass-border);
-      border-radius: 12px; padding: 1rem; font-family: inherit;
-      transition: border 0.3s; color: var(--text-primary);
-    }
-    .contact-form input:focus, .contact-form textarea:focus { border-color: var(--accent3); outline: none; }
-
-    footer {
-      background: var(--glass-bg); backdrop-filter: blur(10px);
-      padding: 2rem; text-align: center; margin-top: 3rem;
-    }
-    .footer-links { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
-    .footer-links a { color: var(--text-secondary); text-decoration: none; font-weight: 500; }
-
-    .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-
-    /* Theme Switcher Button */
-    .theme-switcher {
-      position: fixed; bottom: 2rem; right: 2rem; z-index: 200;
-      background: var(--glass-bg); backdrop-filter: blur(15px);
-      border: 1px solid var(--glass-border); border-radius: 50px;
-      padding: 0.7rem 1.5rem; font-weight: 600; cursor: pointer;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-      color: var(--text-primary);
-      transition: all 0.3s;
-    }
-    .theme-switcher:hover { transform: scale(1.05); }
-
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .timeline::before { left: 1.5rem; }
-      .timeline-item, .timeline-item:nth-child(odd) {
-        justify-content: flex-start; padding-left: 3rem; padding-right: 0;
-      }
-      .timeline-dot { left: 1.1rem; right: auto; }
-    }
-  </style> -->
 </head>
 
 <body>
@@ -266,14 +33,16 @@
   <!-- Mouse trail glow -->
   <div class="cursor-glow" id="cursorGlow"></div>
 
-  <!-- Theme Switcher Button -->
-  <button class="theme-switcher" id="themeToggle">🎨 Theme</button>
+
 
   <!-- Navbar -->
   <nav class="navbar">
     <div class="container nav-container">
       <a href="#home" class="nav-logo">Arooj Tariq</a>
-      <ul class="nav-links">
+
+      <!-- ✅ Bas yeh button add karo yahaan -->
+      <button class="hamburger" id="hamburger">☰</button>
+      <ul class="nav-links" id="navLinks">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#education">Education</a></li>
@@ -454,7 +223,8 @@
       <button type="submit" class="btn btn-primary">Send Message</button>
     </form>
   </section>
-
+  <!-- Theme Switcher Button -->
+  <button class="theme-switcher" id="themeToggle">🎨 Theme</button>
   <footer>
     <div class="footer-links">
       <a href="https://github.com/hafidhaarooj1267" target="_blank" rel="noopener noreferrer"> <i
@@ -462,6 +232,8 @@
         target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="mailto:tariqmd1267@gmail.com" target="_blank"
         rel="noopener noreferrer">Email</a><a href="#">Download
         CV</a>
+      <img src="https://hitwebcounter.com/counter/counter.php?page=YOUR-PAGE-URL&style=0006&nbdigits=4"
+        alt="Visitor Counter">
     </div>
     <p style="color:var(--text-secondary);">© 2025 Your Name. Built with ❤️ using HTML, CSS & JS.</p>
   </footer>
