@@ -214,12 +214,15 @@
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="container reveal">
+ <section id="contact" class="container reveal">
     <h2>Reach Me</h2>
-    <form class="contact-form glass-card">
-      <input type="text" placeholder="Your Name" required>
+
+
+    <form class="contact-form glass-card" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="aafa2df6-6d6a-4a42-bcc5-60be32414fdc">
+      <input type="text" name="subject" placeholder="Your Name" required>
       <input type="email" placeholder="Email Address" required>
-      <textarea rows="5" placeholder="Tell me about your project or opportunity..."></textarea>
+      <textarea name="body" rows="8" placeholder="Tell me about your project or opportunity..."></textarea>
       <button type="submit" class="btn btn-primary">Send Message</button>
     </form>
   </section>
