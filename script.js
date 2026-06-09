@@ -198,7 +198,8 @@ const certifications = [
 
 const projects = [
     { id: 1, title: "LMS  Dashboard", pillar: "bi", tools: ["Power BI", "Google Sheet"], desc: "Interactive KPI dashboard.", detail: "Built  Power BI report with DAX Calculation. Reduced manual reporting by 70%.", github: "https://github.com/hafidhaarooj1267/Power-BI-LMS-Dashboard", img: "images/lmsproject.png", icon: "📊", },
-    { id: 2, title: "Portfolio Website", pillar: "fe", tools: ["HTML", "CSS", "JS"], desc: "Carousel, particles, flip cards.", detail: "Custom interactive portfolio with theme switcher and full-page animations.", img: "images/lmsproject.png", icon: "🎨" },
+    { id: 2, title: "Portfolio Website", pillar: "fe", tools: ["HTML", "CSS", "JS"], desc: "Carousel, particles, flip cards.", detail: "Custom interactive portfolio with theme switcher and full-page animations.",github: "aroojtariq.vercel.app", img: "images/portfolioimage.png", icon: "🎨" },
+    {id: 2, title: "Evaccination Management System", pillar: "fe", tools: ["HTML", "CSS", "JS","PHP","MYSQL"], desc: "Carousel, particles, flip cards.", detail: "Custom interactive portfolio with theme switcher and full-page animations.",github: "evaccination-system.vercel.app", img: "images/evaccinationimage.png", icon: "🎨"},
     { id: 3, title: "HR Analytics Dashboard", pillar: "bi", tools: ["Power BI", "Excel"], desc: "Interactive KPI Dashboard", detail: "Built  Power BI report with DAX Calculation. Find insights in company about emplyees", github: "https://github.com/hafidhaarooj1267/Power-BI-HR-Dashboard", img: "images/HR-PowerBI-Dashboard.png", icon: "🤖" },
     { id: 4, title: "Excel Automated Reports", pillar: "bi", tools: ["Excel", "VBA"], desc: "Macros & Power Query.", detail: "Automated monthly reporting, reduced manual work by 80%.", img: "images/lmsproject.png", icon: "📋" }
 ];
