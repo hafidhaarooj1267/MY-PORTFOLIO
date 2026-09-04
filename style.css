@@ -822,28 +822,44 @@ footer {
         color: white !important;
     }
 
+    /* ========== MOBILE FIX ========== */
+@media (max-width: 768px) {
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100%;
+    }
 
-    /* .theme-switcher {
-        position: fixed !important;
-        bottom: 2.5rem !important;
-        right: 1.5rem !important;
-        z-index: 9999999 !important;
-        display: block !important;
-        padding: 0.6rem 1rem !important;
-        background: #ffffff !important;
-       
-    /* color: #000000 !important; */
+    .container {
+        width: 95%;
+        max-width: 100%;
+    }
+
+    .skills-grid,
+    #passion .skills-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex !important;
+    }
+
+    .theme-switcher {
+        right: 1rem !important;
+        left: auto !important;
+        bottom: 2rem !important;
+    }
 }
 
 
-
-
-/* @media (max-width: 768px) {
-    .theme-switcher {
-        bottom: 2rem; /* Moves it higher up on mobile */
-right: 2rem;
-/* Moves it further left away from edge */
-padding: 0.6rem 1rem;
 /* Makes button size mobile-friendly */
 }
 
