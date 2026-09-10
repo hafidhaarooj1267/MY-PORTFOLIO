@@ -536,7 +536,7 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: "High-performance responsive personal portfolio featuring dynamic theme switching, fluid carousels, and particles.",
       detail: "Engineered a custom glassmorphism portfolio with 5 color themes, hardware-accelerated CSS animations, touch-swipe carousel sliders, and a full-page particle engine optimized for 60fps.",
       github: "https://github.com/hafidhaarooj1267",
-      img: "images/powerbi.png", // fallback image
+      img: "images/portfolioimage.png", // fallback image
       icon: "🎨"
     },
     {
@@ -547,7 +547,7 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: "Healthcare portal enabling parents to register infants, view immunization schedules, and hospital admins to verify records.",
       detail: "Built secure relational database architecture using MySQL and PHP. Implemented automated vaccination schedule alerts, role-based authentication, and admin reporting dashboards.",
       github: "https://github.com/hafidhaarooj1267",
-      img: "images/intermediatesql.png", // fallback image
+      img: "images/evaccinationimage.png", // fallback image
       icon: "💉"
     },
     {
@@ -558,20 +558,10 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: "Executive KPI dashboard analyzing workforce attrition, promotion cycles, department performance, and employee retention.",
       detail: "Synthesized multi-sheet employee records into a unified star-schema data model. Designed interactive attrition slicers and demographic breakdown visual analytics.",
       github: "https://github.com/hafidhaarooj1267/Power-BI-HR-Dashboard",
-      img: "images/lmsproject.png",
+      img: "images/HR-PowerBI-Dashboard.png",
       icon: "👥"
-    },
-    {
-      id: 5,
-      title: "Automated Financial & Sales Reports",
-      pillar: "bi",
-      tools: ["Excel", "VBA", "Power Query"],
-      desc: "Automated end-of-month data consolidation pipelines reducing manual spreadsheet reconciliation time by 80%.",
-      detail: "Structured automated ETL pipelines using Power Query and VBA macros to parse raw CSV exports into standardized executive balance reports and interactive pivot summaries.",
-      github: "https://github.com/hafidhaarooj1267",
-      img: "images/powerbi.png",
-      icon: "📋"
     }
+   
   ];
 
   const internships = [
